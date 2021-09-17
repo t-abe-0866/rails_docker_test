@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## セットアップ手順
 
-Things you may want to cover:
+```
+$ docker-compose build
+$ docker-compose run web bin/rails db:create
+$ docker-compose run web bin/rails db:migrate
+$ docker-compose run web bin/rails db:seed
+```
 
-* Ruby version
+## サーバの起動
 
-* System dependencies
+```
+$ docker-compose up -d
+```
 
-* Configuration
+## ブラウザからのアクセス
 
-* Database creation
+http://localhost:3000 を開く
 
-* Database initialization
+## サーバの停止
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ docker-compose down
+```
